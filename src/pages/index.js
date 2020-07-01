@@ -8,36 +8,123 @@ import React from 'react';
 
 const Index = ({ data }) => (
   <Layout>
-    <Box
+    <div style={{ height: '90vh' }}>
+      <Box
+        style={{
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          padding: '0 4rem 2rem 4rem',
+        }}
+      >
+        <Title
+          as="h1"
+          style={{
+            textAlign: 'center',
+            fontSize: '9em',
+            marginBottom: '6rem',
+            color: 'rgb(59, 117, 83)',
+          }}
+        >
+          {data.homeJson.title}
+        </Title>
+        <Title
+          as="h2"
+          size="large"
+          style={{
+            fontFamily: '"Open Sans", sans-serif',
+            textAlign: 'center',
+            color: '#3b7553',
+          }}
+        >
+          {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
+        </Title>
+      </Box>
+    </div>
+    <div
       style={{
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        padding: '0 4rem 2rem 4rem',
+        background: 'rgba(59, 117, 83, .25)',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
-      <Title
-        as="h1"
+      <Box
         style={{
-          textAlign: 'center',
-          fontSize: '9em',
-          marginBottom: '6rem',
-          color: '#3b7553',
+          marginLeft: 'auto',
+          marginRight: 'auto',
         }}
       >
-        {data.homeJson.title}
-      </Title>
-      <Title
-        as="h2"
-        size="large"
+        <Title
+          as="h2"
+          size="large"
+          style={{
+            fontFamily: '"Open Sans", sans-serif',
+            textAlign: 'center',
+            color: '#3b7553',
+          }}
+        >
+          {
+            'We calculate your daily budget. At the end of the day, any leftover funds will be transferred into a savings account.'
+          }
+        </Title>
+      </Box>
+    </div>
+    <div
+      style={{
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Box
         style={{
-          fontFamily: '"Open Sans", sans-serif',
-          textAlign: 'center',
-          color: '#3b7553',
+          marginLeft: 'auto',
+          marginRight: 'auto',
         }}
       >
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
-      </Title>
-    </Box>
+        <Title
+          as="h2"
+          size="large"
+          style={{
+            fontFamily: '"Open Sans", sans-serif',
+            textAlign: 'center',
+            color: '#3b7553',
+          }}
+        >
+          {'Third panel'}
+        </Title>
+      </Box>
+    </div>
+    <div
+      style={{
+        background: 'rgba(59, 117, 83, .25)',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Box
+        style={{
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
+      >
+        <Title
+          as="h2"
+          size="large"
+          style={{
+            fontFamily: '"Open Sans", sans-serif',
+            textAlign: 'center',
+            color: '#3b7553',
+          }}
+        >
+          {'Fourth panel'}
+        </Title>
+      </Box>
+    </div>
     <div style={{ height: '50vh' }} />
     <IOExample />
     <div>

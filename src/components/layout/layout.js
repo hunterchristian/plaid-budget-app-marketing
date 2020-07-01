@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
 import Head from 'components/head';
 import Header from 'components/header';
+import { graphql, StaticQuery } from 'gatsby';
 import GlobalStyle from 'global.css.js';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const Layout = ({ data, children }) => (
-  <div>
+const Layout = ({ data, children, style }) => (
+  <div style={style}>
     <GlobalStyle />
     <Head />
     <Header title={data.site.siteMetadata.siteTitle} />
