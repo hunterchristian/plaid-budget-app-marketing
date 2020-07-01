@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem;
+  padding: 2rem 2rem 0 2rem;
 
   a {
     color: #757575;

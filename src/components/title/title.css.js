@@ -1,7 +1,8 @@
-import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
+import styled from 'styled-components';
 
 export const Text = styled.span`
+  font-family: 'Yeseva One', cursive;
   display: block;
   font-weight: ${({ size }) => () => {
     switch (size) {

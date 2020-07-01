@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
 import { Location } from '@reach/router';
+import { graphql, StaticQuery } from 'gatsby';
 import schemaGenerator from 'helpers/schemaGenerator';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Head = ({
   siteTitle,
@@ -149,6 +149,15 @@ const Head = ({
       sizes="16x16"
       type="image/png"
     />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    ></link>
 
     <script type="application/ld+json">
       {JSON.stringify(

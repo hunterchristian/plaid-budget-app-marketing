@@ -1,30 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Layout from 'components/layout';
 import Box from 'components/box';
-import Title from 'components/title';
-import Gallery from 'components/gallery';
 import IOExample from 'components/io-example';
-import Modal from 'containers/modal';
+import Layout from 'components/layout';
+import Title from 'components/title';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const Index = ({ data }) => (
   <Layout>
-    <Box>
-      <Title as="h2" size="large">
+    <Box
+      style={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        padding: '0 4rem 2rem 4rem',
+      }}
+    >
+      <Title
+        as="h1"
+        style={{ textAlign: 'center', fontSize: '9em', marginBottom: '6rem' }}
+      >
+        {data.homeJson.title}
+      </Title>
+      <Title
+        as="h2"
+        size="large"
+        style={{ fontFamily: '"Open Sans", sans-serif', textAlign: 'center' }}
+      >
         {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
       </Title>
-      <Modal>
-        <video
-          src="https://i.imgur.com/gzFqNSW.mp4"
-          playsInline
-          loop
-          autoPlay
-          muted
-        />
-      </Modal>
     </Box>
-    <Gallery items={data.homeJson.gallery} />
     <div style={{ height: '50vh' }} />
     <IOExample />
   </Layout>
