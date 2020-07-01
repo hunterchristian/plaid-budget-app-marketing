@@ -23,7 +23,7 @@ const AnimatedContainer = posed.div({
 const Header = () => (
   <AnimatedContainer>
     <Container>
-      <Hamburger />
+      <Hamburger style={{ fill: '#3b7553' }} />
     </Container>
   </AnimatedContainer>
 );

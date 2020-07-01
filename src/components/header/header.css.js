@@ -5,7 +5,7 @@ export const Container = styled.header`
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem 0 2rem;
+  padding: 4rem 9% 0 8rem;
 
   a {
     color: #757575;
