@@ -1,8 +1,9 @@
+import wrapPageElementWithTransition from 'helpers/wrapPageElement';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { ServerStyleSheet } from 'styled-components';
 import AppProvider from 'store/provider';
-import wrapPageElementWithTransition from 'helpers/wrapPageElement';
+import { ServerStyleSheet } from 'styled-components';
+import AppThemeProvider from './src/theme';
 
 export const replaceRenderer = ({
   bodyComponent,
@@ -10,7 +11,11 @@ export const replaceRenderer = ({
   setHeadComponents,
 }) => {
   // React Context in SSR/build
-  const ConnectedBody = () => <AppProvider>{bodyComponent}</AppProvider>;
+  const ConnectedBody = () => (
+    <AppThemeProvider>
+      <AppProvider>{bodyComponent}</AppProvider>
+    </AppThemeProvider>
+  );
   replaceBodyHTMLString(renderToString(<ConnectedBody />));
 
   // Add styled-components in SSR/build
