@@ -99,7 +99,9 @@ const Index = ({ data }) => {
               color: '#3b7553',
             }}
           >
-            {'Third panel'}
+            {
+              'Never live beyond your means again. Piggybank provides a gentle awareness of overspending.'
+            }
           </Title>
         </Box>
       </div>
@@ -127,7 +129,7 @@ const Index = ({ data }) => {
               color: '#3b7553',
             }}
           >
-            {'Fourth panel'}
+            {'Encrypted at rest. Your data is under lock and key.'}
           </Title>
         </Box>
       </div>
