@@ -1,4 +1,3 @@
-import Hamburger from 'components/header/hamburger';
 import PropTypes from 'prop-types';
 import React from 'react';
 import posed from 'react-pose';
@@ -22,9 +21,7 @@ const AnimatedContainer = posed.div({
 
 const Header = () => (
   <AnimatedContainer>
-    <Container>
-      <Hamburger style={{ fill: '#3b7553' }} />
-    </Container>
+    <Container>{/* <Hamburger style={{ fill: '#3b7553' }} /> */}</Container>
   </AnimatedContainer>
 );
 
